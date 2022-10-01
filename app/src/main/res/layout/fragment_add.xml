@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/shoshow"
+    android:background="@color/main">
+    <!--    android:visibility="invisible"-->
+
+
+    <LinearLayout
+        android:elevation="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:layout_weight="5"
+        android:background="@drawable/design"
+        android:orientation="vertical">
+        <!--        <ImageButton-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="X"-->
+        <!--            android:id="@+id/go_main"-->
+        <!--            android:background="@drawable/back"-->
+        <!--            android:layout_margin="10sp"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/save"
+                android:layout_width="55dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="9dp"
+                android:layout_marginTop="5dp"
+                android:text="저장"
+                android:background="@color/white"
+                style="?android:attr/borderlessButtonStyle"
+                android:textSize="8pt"/>
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/show_img"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_gravity="left"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="26dp"
+                android:layout_marginBottom="26dp"
+                android:src="@drawable/s" />
+
+            <TextView
+                android:id="@+id/show_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/show_img"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="right"
+                android:text="NAME"
+                android:textSize="20pt" />
+
+            <TextView
+                android:id="@+id/show_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_name"
+                android:layout_marginBottom="20dp"
+                android:layout_toRightOf="@+id/show_img"
+                android:fontFamily="sans-serif-medium"
+                android:text="POSITION"
+                android:textSize="8pt" />
+
+            <TextView
+                android:id="@+id/show_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/show_position"
+                android:layout_toRightOf="@+id/show_img"
+                android:fontFamily="sans-serif-medium"
+                android:text="COMPANY"
+                android:textSize="8pt" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/signup_nfc"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/main"
+            android:layout_marginTop="30dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS: "
+                android:id="@+id/Address"
+                android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/show_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTENT"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goweb"
+                android:text="방문하기"
+                android:visibility="gone"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALL: "
+                android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/show_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTENT"/>
+            <ImageButton
+                android:id="@+id/callimg"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/ic_baseline_call_24"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL: "
+                android:fontFamily="sans-serif-medium"/>
+            <TextView
+                android:id="@+id/show_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CONTENT"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="10sp">
+        <!--        <ImageButton-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="save"-->
+        <!--            android:layout_marginLeft="10dp"-->
+        <!--            android:layout_marginRight="10dp"-->
+        <!--            android:id="@+id/save"-->
+        <!--            android:background="@drawable/save"/>-->
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/save"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="저장"-->
+<!--            android:background="#2b59a5"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:textSize="8pt"/>-->
+
+    </LinearLayout>
+
+</LinearLayout>

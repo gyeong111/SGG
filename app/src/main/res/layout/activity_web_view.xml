@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/shoshow">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/close"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:background="@color/white"
+        android:textColor="@color/main"
+        style="?android:attr/borderlessButtonStyle"
+        android:textSize="10pt"/>
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webview"/>
+</LinearLayout>

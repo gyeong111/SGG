@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/shoshow">
+
+    <!--    <Button-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="X"-->
+    <!--        android:id="@+id/x"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/makeweb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="홈페이지 만들기"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-medium"
+            style="?android:attr/borderlessButtonStyle"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="완료"
+            android:background="@color/white"
+            android:fontFamily="sans-serif-medium"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+    <!--    <RadioGroup-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:id="@+id/group">-->
+    <!--        <RadioButton-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="명함"-->
+    <!--            android:id="@+id/card"-->
+    <!--            android:onClick="mOnclick"/>-->
+    <!--        <RadioButton-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="홈페이지"-->
+    <!--            android:id="@+id/web"-->
+    <!--            android:onClick="mOnclick"/>-->
+    <!--    </RadioGroup>-->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/group">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/card"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="명함"
+            android:checked="true"
+            android:onClick="onClick"
+            android:background="@drawable/radio_left_selector"
+            android:button="@android:color/transparent"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/web"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="웹페이지"
+            android:textColor="@color/main"
+            android:checked="false"
+            android:onClick="onClick"
+            android:button="@android:color/transparent"
+            android:background="@drawable/radio_right_selector"/>
+    </RadioGroup>
+
+    <LinearLayout
+        android:elevation="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_weight="5"
+        android:background="@drawable/design"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/show_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="26dp"
+            android:src="@drawable/s" />
+
+        <!--        안보임 NFC값 intent로 받을 예정-->
+        <TextView
+            android:id="@+id/signup_nfc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="1dp"
+            android:text="nfc"
+            android:textSize="3pt"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/show_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:hint="COMPANY"
+            android:textSize="12pt" />
+
+        <EditText
+            android:id="@+id/show_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:hint="이름을 입력해 주세요"
+            android:textSize="10pt" />
+
+        <EditText
+            android:id="@+id/show_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="10dp"
+            android:hint="직급을 입력해주세요" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1.5dp"
+            android:layerType="software"
+            android:src="@drawable/dash_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS : "
+                android:id="@+id/address"/>
+
+            <EditText
+                android:id="@+id/show_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="회사주소를 입력해주세요" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/webcheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홈페이지 확인"
+                android:background="#2b59a5"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALL : " />
+
+            <EditText
+                android:id="@+id/show_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="전화번호를 입력해주세요" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL : " />
+
+            <EditText
+                android:id="@+id/show_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="이메일을 입력해주세요" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
